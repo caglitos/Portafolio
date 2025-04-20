@@ -1,54 +1,11 @@
-# React + TypeScript + Vite
+# Bio corta
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Hola! Soy Carlos Briseño, desarrollador full-stack apasionado por construir sitios web rápidos y ligeros para los servidores, accesibles y con código limpio. Mi expertise incluye JavaScript, Typescript, React y CSS avanzado, junto con frameworks como Bootstrap. Para el server consoco acerca de MySQL o MongoDB, junto con Node.js y Express.js o php.
+Si bien no cuento con experiencia real en el sector, creo ser un buen candidato por mi facilidad de aprender y mis proyectos que aunque escolares los concidero competentes y buenos. Disfruto resolver problemas técnicos y aprender nuevas tecnologías (¡actualmente explorando IA aplicada al desarrollo!).
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Proyectos Destacados  
+**🛠️ App de Gestión de Tareas** 
+- **Descripción**: Aplicación full-stack (React + Node.js + MongoDB) para organizar tareas con IA integrada.  
+- **Estado**: *En desarrollo (v1.0 próxima a lanzarse)*.  
+- **Código**: [Ver repositorio en GitHub](https://github.com/tuusuario/proyecto).  
