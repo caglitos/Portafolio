@@ -8,20 +8,6 @@ main {
   display: flex;
   flex-direction: row;
 }
-h1 {
-  text-align: center;
-  font-size: 4vw;
-  margin-top: 20px;
-  margin-bottom: 0;
-  font-weight: 100;
-}
-
-h2 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 0;
-  font-weight: 100;
-}
 
 .barras {
   display: flex;
@@ -70,10 +56,35 @@ h2 {
   margin-left: 16.7vw;
 }
 
+.presentacion > h1 {
+  text-align: center;
+  font-size: 4vw;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-weight: 100;
+}
+
+.presentacion > h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 100;
+}
+
 .mi-ft {
   border-radius: 2.6vw;
   height: 13.2vw;
   width: 13.2vw;
   object-fit: cover;
   margin-left: 15.6vw;
+}
+
+.BtnN {
+  background-color: #494949;
+  color: #fff;
+  border-radius: 2.6vw;
+  border: none;
+  height: 9.2vw;
+  width: 18.4vw;
+  font-size: 2.5vw;
 }
