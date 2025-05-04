@@ -16,9 +16,12 @@ function app() {
           alt="Foto mia" // ¡Siempre incluye 'alt' para accesibilidad!
           className="mi-ft" // Clase CSS opcional
         />
-        <div className="presentacion">
-          <h1>Hola, soy Carlos</h1>
-          <h2>Desarrollador Web full-stack</h2>
+        <div className="container">
+          <div className="presentacion">
+            <h1>Hola, soy Carlos</h1>
+            <h2>Desarrollador Web full-stack</h2>
+          </div>
+          <button className="btn">Ver Proyectos</button>
         </div>
       </main>
     </>
