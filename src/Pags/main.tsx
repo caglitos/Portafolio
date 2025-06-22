@@ -1,27 +1,21 @@
-import React, { useState } from "react";
+import Barras from "../Components/barras";
 
 function app() {
   return (
     <>
-      <div className="barras">
-        <div className="barras1 barra"></div>
-        <div className="barras2 barra"></div>
-        <div className="barras3 barra"></div>
-        <div className="barras4 barra"></div>
-        <div className="barras5 barra"></div>
-      </div>
+      <Barras />
       <main>
         <img
           src="https://www.chileclimbers.cl/wp-content/uploads/2019/09/final.jpg"
-          alt="Foto mia" // ¡Siempre incluye 'alt' para accesibilidad!
-          className="mi-ft" // Clase CSS opcional
+          alt="Foto mia"
+          className="mi-ft"
         />
         <div className="container">
           <div className="presentacion">
-            <h1>Hola, soy Carlos</h1>
-            <h2>Desarrollador Web full-stack</h2>
+            <h1>¡Hola!, soy Carlos</h1>
+            <h2>Desarrollador Web Full-Stack</h2>
           </div>
-          <button className="btn">Ver Proyectos</button>
+          <button className="btn">Sobre mi</button>
         </div>
       </main>
     </>

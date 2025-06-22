@@ -1,6 +1,23 @@
 :root {
-  background-color: #00011a;
-  color: #fff;
+  --darkBlue: #00011a;
+  --white: #ffffff;
+  --blue: #1789db;
+  --purple: #7c43ee;
+  --pink: #aa4294;
+  --nameGradient: linear-gradient(
+    90deg,
+    var(--purple),
+    var(--blue),
+    var(--pink),
+    var(--purple),
+    var(--blue),
+    var(--pink)
+  );
+  --gray: #494949;
+  --textBlack: #222222;
+
+  background-color: var(--darkBlue);
+  color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,37 +39,44 @@ main {
   background-color: #ccc;
   width: 1px;
   transform: rotate(20deg);
-  box-shadow: 0 0 100px 60px #1789db; /* ¡Sombra de 100px! */
+
   margin-left: 7%;
   margin-right: 7%;
 }
 
 .barras1 {
-  height: 4.89vw;
   margin-left: 13%;
+  animation: barras1 2s ease forwards;
 }
 .barras2 {
-  height: 11.35vw;
+  animation: barras2 2s ease forwards;
 }
 .barras3 {
-  height: 18.69vw;
+  animation: barras3 2s ease forwards;
 }
 .barras4 {
-  height: 14.16vw;
   margin-left: 11%;
   margin-right: 11%;
+  animation: barras4 2s ease forwards;
 }
 .barras5 {
-  height: 10vw;
   margin-right: 16%;
+  animation: barras5 2s ease forwards;
 }
 
 .mi-ft {
-  border-radius: 2.6vw;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-radius: 1.7vw;
   height: 13.2vw;
   width: 13.2vw;
   object-fit: cover;
   margin-left: 15.6vw;
+  transition: all 0.5s ease-in-out, border-radius 0.3s ease-in-out;
+}
+.mi-ft:hover {
+  border-radius: 2.6vw;
+  border: 2px solid var(--blue);
 }
 
 .continers {
@@ -83,37 +107,140 @@ main {
   justify-content: center;
   margin-top: 0;
   margin-left: 16.7vw;
-  background: linear-gradient(90deg, #7c43ee, #2e80cc, #4d42aa);
+  background: var(--nameGradient);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   font-weight: 900;
 
   /* Animación del gradiente */
-  animation: gradientMove 2s ease infinite;
+  animation: gradientMove 4s ease infinite;
   background-size: 200% 200%;
 }
 
 .btn {
-  background-color: #494949;
-  color: white;
+  background-color: var(--gray);
   border: none;
-  border-radius: 2vw;
+  border-radius: 0.5vw;
+
+  color: var(--textBlack);
+  font-size: 2rem;
   justify-content: center;
+  font-weight: bold;
+
   margin-left: 26.82vw;
-  margin-top: 7.55;
+  margin-top: 7.55vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+
   height: 7.5vw;
   width: 18.43;
+  transition: all 0.5s ease-in-out, border-radius 0.3s ease-in-out;
+  animation: btnhover 0s ease;
+}
+
+.btn:hover {
+  color: var(--white);
+  background-color: var(--darkBlue);
+  border-radius: 1.5vw;
+  box-shadow: 0 0 0 2px var(--blue) inset;
+
+  cursor: pointer;
+
+  animation: btnhover 0.5s ease;
 }
 
 @keyframes gradientMove {
   0% {
+    background-position: -100% -50%;
+  }
+  25% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
   }
-  100% {
+  75% {
     background-position: 0% 50%;
+  }
+  100% {
+    background-position: -100% -50%;
+  }
+}
+
+@keyframes btnhover {
+  0% {
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05);
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes barras1 {
+  0% {
+    height: 0;
+    box-shadow: 0 0 0px 0px var(--blue);
+  }
+  100% {
+    height: 4.89vw;
+    box-shadow: 0 0 100px 50px var(--pink);
+  }
+}
+
+@keyframes barras2 {
+  0% {
+    height: 0;
+    box-shadow: 0 0 0px 0px var(--purple);
+  }
+  50% {
+    box-shadow: 0 0 50px 25px var(--purple);
+  }
+  100% {
+    height: 11.35vw;
+    box-shadow: 0 0 100px 50px var(--blue);
+  }
+}
+
+@keyframes barras3 {
+  0% {
+    height: 0;
+    margin-bottom: 18.69vw;
+    box-shadow: 0 0 0px 0px var(--pink);
+  }
+  100% {
+    height: 18.69vw;
+    box-shadow: 0 0 100px 60px var(--blue);
+  }
+}
+
+@keyframes barras4 {
+  0% {
+    height: 0;
+    box-shadow: 0 0 0px 0px var(--purple);
+  }
+  50% {
+    box-shadow: 0 0 50px 25px var(--purple);
+  }
+  100% {
+    height: 14.16vw;
+    box-shadow: 0 0 100px 50px var(--blue);
+  }
+}
+
+@keyframes barras5 {
+  0% {
+    height: 0;
+    box-shadow: 0 0 0px 0px var(--blue);
+  }
+  100% {
+    height: 10vw;
+    box-shadow: 0 0 100px 50px var(--pink);
   }
 }
